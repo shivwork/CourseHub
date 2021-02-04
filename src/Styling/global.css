@@ -1,0 +1,16 @@
+.page-content{
+    flex-basis: 90%;
+    padding-left: 2em;
+    padding-top: 1em;
+}
+
+.page-container{
+    display: flex;
+    height: 100vh;
+}
+.card-body{
+    text-align: left;
+}
+a {
+    color:#6d6d6d;
+}

@@ -1,0 +1,13 @@
+.login-container{
+        padding: 160px 0;
+    
+      
+}
+
+.login-container form {
+        margin: 0 auto;
+        max-width: 500px;
+        padding: 50px;
+        border: 1px solid #e6e6e6;
+        border-radius: 10px;
+  }
