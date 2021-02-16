@@ -8,7 +8,7 @@ import '../Styling/dashboard.css';
 import { courseList } from '../Utils/mockData';
 
 const Dashboard = () => (
-    <Container className="page-container">
+    <Container fluid className="page-container">
         <Sidebar />
         <div className="page-content">
             <h3>Course List </h3>

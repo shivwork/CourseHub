@@ -1,21 +1,37 @@
 import React from 'react';
-import { Nav } from "react-bootstrap";
+import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
+import '@trendmicro/react-sidenav/dist/react-sidenav.css';
+
 import { Link } from 'react-router-dom'
 import '../Styling/sidebar.css'
 
 const Sidebar = () => (
-    <Nav className="col-md-12 d-none d-md-block bg-light sidebar"
-        activeKey="/home"
-        onSelect={selectedKey => alert(`selected ${selectedKey}`)}
+    <SideNav
+        onSelect={(selected) => {
+            // Add your code here
+        }}
+        className="sidebar"
     >
-        <div className="sidebar-sticky"> My course</div>
-        <Nav.Item>
-            <Nav.Link eventKey="History">History </Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-            <Nav.Link eventKey="Recent">Recent</Nav.Link>
-        </Nav.Item>
-    </Nav >
+        <SideNav.Toggle />
+        <SideNav.Nav defaultSelected="home">
+            <NavItem eventKey="home">
+                <NavIcon>
+                    <i className="fa fa-fw fa-home" style={{ fontSize: '1.75em' }} />
+                </NavIcon>
+                <NavText>
+                    My Courses
+            </NavText>
+            </NavItem>
+            <NavItem eventKey="logout" className="logout-button" style={{ position: 'absolute', width: '100%', bottom: '0' }}>
+                <NavIcon>
+                    <i className="fa fa-fw fa-home" style={{ fontSize: '1.75em' }} />
+                </NavIcon>
+                <NavText  >
+                    Logout
+                </NavText>
+            </NavItem>
+        </SideNav.Nav>
+    </SideNav>
 );
 
 export default Sidebar;

@@ -1,9 +1,20 @@
 import React, { PureComponent } from 'react';
 import Login from '../Components/Login';
+import PhoneLogin from '../Components/PhoneLogin';
 
 class LoginContainer extends PureComponent {
     constructor(props) {
         super(props);
+        this.state = {
+            isPhoneLogin: false
+        }
+    }
+
+    loginTypeHandler = (e, loginType) => {
+        e.preventDefault();
+        this.setState({
+            isPhoneLogin: loginType === 'phone'
+        })
     }
 
     loginHandler = () => {
@@ -11,8 +22,21 @@ class LoginContainer extends PureComponent {
     };
 
     render() {
+        const { isPhoneLogin } = this.state;
+
         return (
-            <Login />
+            <>
+                {
+                    isPhoneLogin ?
+                        <PhoneLogin
+                            loginTypeHandler={this.loginTypeHandler}
+
+                        /> : <Login
+                            loginTypeHandler={this.loginTypeHandler}
+                        />
+                }
+            </>
+
         )
     }
 }

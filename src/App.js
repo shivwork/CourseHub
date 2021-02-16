@@ -13,13 +13,11 @@ import './Styling/global.css';
 
 function App() {
   return (
-    <Container className="App">
+    <Container fluid className="App">
       <Router>
-        <div>
-          <Route exact path="/" component={LoginContainer} />
-          <Route path="/dashboard" component={DashboardContainer} />
-          <Route path="/course" component={CourseDetail} />
-        </div>
+        <Route exact path="/" component={LoginContainer} />
+        <Route path="/dashboard" component={DashboardContainer} />
+        <Route path="/course" component={CourseDetail} />
       </Router>
     </Container>
   );

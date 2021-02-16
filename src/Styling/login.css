@@ -2,3 +2,9 @@
     color: white;
     font-weight: 700;
 }
+
+.email-login-button{
+    color: #ff8787;
+    font-weight: 400;
+    cursor: pointer;
+}
