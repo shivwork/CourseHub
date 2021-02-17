@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { Form, Col, Row, Button } from 'react-bootstrap';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 import firebase from '../Utils/firebase';
 
 import '../Styling/login.css';
 
 const PhoneLogin = (props) => {
     const { loginTypeHandler } = props;
+    const [phoneOtp, setPhoneOtp] = useState(false);
+    console.log('%cShivTest phoneOtp :->', 'color: blue', phoneOtp);
 
     const handlePhoneLogin = (e) => {
         let recaptcha = new firebase.auth.RecaptchaVerifier('recaptcha-container');
@@ -28,22 +31,31 @@ const PhoneLogin = (props) => {
 
     return (
         <div className="login-container">
-            <Form>
-                <Form.Group as={Row} controlId="formPlaintextEmail">
-                    <Form.Label column sm="2">
-                        Phone
-                    </Form.Label>
-                    <Col sm="10">
-                        <Form.Control type="number" placeholder="Phone" />
-                    </Col>
-                </Form.Group>
-                <Col md={{ span: 8, offset: 4 }}>
-                    <Button style={{ backgroundColor: '#0062cc' }} block size="sm" onClick={(e) => handlePhoneLogin(e)} >Submit</Button>
-                    <label htmlFor=""></label>
-                    <p>Sign in using Email <span className="email-login-button" onClick={(e) => loginTypeHandler(e, 'email')}>click here</span>  </p>
-                </Col>
-                <div id="recaptcha-container"></div>
-            </Form>
+            {!phoneOtp ?
+                <>
+                    <TextField fullWidth id="standard-basic" label="Phone Number" color="primary" />
+                    <br />
+                    <br />
+                    <Button className="blue-button" fullWidth="true" variant="contained" style={{ backgroundColor: '#329BF7', color: 'white', fontWeight: '600' }} size="large" onClick={e => setPhoneOtp(true)} >
+                        Login
+                    </Button>
+                </>
+
+                :
+                <>
+                    <TextField fullWidth id="standard-basic" label="OTP" color="primary" />
+                    <br />
+                    <br />
+                    <Button className="blue-button" fullWidth="true" variant="contained" style={{ backgroundColor: '#329BF7', color: 'white', fontWeight: '600' }} size="large" onClick={(e) => handlePhoneLogin(e)} >
+                        Verify
+                    </Button>
+                    <br />
+                    <br />
+                    <Button color="primary" style={{ color: 'white', fontWeight: '600' }}>Resend</Button>
+                </>
+            }
+            <br />
+            <p className="login-type-text">Sign in using Email <span className="email-login-button" onClick={(e) => loginTypeHandler(e, 'email')}>click here</span>  </p>
         </div>
     )
 }

@@ -1,10 +1,30 @@
-.login-button{
-    color: white;
-    font-weight: 700;
+.login-container{
+    width: 400px;
+    margin: 0 auto;
+    color: cornsilk;
 }
-
 .email-login-button{
     color: #ff8787;
     font-weight: 400;
     cursor: pointer;
+}
+
+.full-size-button{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.blue-button{
+    background-color: #329BF7;
+    color: cornsilk;
+}
+
+label{
+    color: #FFF8F8 !important;
+}
+.MuiInput-underline:before{
+    color: #FFF8F8 !important;
+}
+.MuiInputBase-input{
+    color: #FFF8F8 !important;
 }

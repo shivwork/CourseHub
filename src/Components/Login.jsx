@@ -1,8 +1,11 @@
 import React, { PureComponent, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import '../Styling/style.css';
-import { Container, Card, InputGroup, Button, Form, Row, Col } from 'react-bootstrap';
+import TextField from '@material-ui/core/TextField';
+
 import { Link } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
+
 
 import '../Styling/login.css';
 
@@ -13,7 +16,7 @@ const Login = (props) => {
     const history = useHistory();
 
     const submitHandler = (e) => {
-        history.push('/dashboard');
+        // history.push('/dashboard');
     }
 
     const inputChangeHandler = (e, inputType) => {
@@ -22,32 +25,16 @@ const Login = (props) => {
 
     return (
         <div className="login-container">
-            <Form>
-                <Form.Group as={Row} controlId="formPlaintextEmail">
-                    <Form.Label column sm="2">
-                        Email
-                    </Form.Label>
-                    <Col sm="10">
-                        <Form.Control type="email" placeholder="Email" onChange={(e) => inputChangeHandler(e, 'email')} />
-                    </Col>
-                </Form.Group>
-
-                <Form.Group as={Row} controlId="formPlaintextPassword">
-                    <Form.Label column sm="2">
-                        Password
-                    </Form.Label>
-                    <Col sm="10">
-                        <Form.Control type="password" placeholder="Password" onChange={(e) => inputChangeHandler(e, 'password')} />
-                    </Col>
-                </Form.Group>
-                <Col md={{ span: 8, offset: 4 }}>
-                    <Button style={{ backgroundColor: '#0062cc' }} block size="sm" onClick={(e) => submitHandler(e)} >
-                        {/* <Link to="/dashboard" className="login-button">Login</Link> */}
-                        Login
-                    </Button>
-                    <p className="login-type-text">Sign in using Phone <span className="email-login-button" onClick={(e) => loginTypeHandler(e, 'phone')}>click here</span>  </p>
-                </Col>
-            </Form>
+            <TextField fullWidth id="standard-basic" label="Email" color="primary" />
+            <br />
+            <br />
+            <TextField fullWidth id="standard-basic" label="Password" />
+            <br />
+            <br />
+            <Button className="blue-button" fullWidth="true" variant="contained" style={{ backgroundColor: '#329BF7', color: 'white', fontWeight: '600' }} size="large" onClick={(e) => submitHandler(e)} >
+                Login
+            </Button>
+            <p className="login-type-text">Sign in using Phone <span className="email-login-button" onClick={(e) => loginTypeHandler(e, 'phone')}>click here</span>  </p>
         </div>
     )
 }
