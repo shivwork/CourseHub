@@ -20,3 +20,7 @@ a {
 .App{
     background-color: #007bff;
 }
+
+svg{
+    margin-right: 5px;
+}

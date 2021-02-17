@@ -1,4 +1,5 @@
 import React, { PureComponent, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import '../Styling/style.css';
 import { Container, Card, InputGroup, Button, Form, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -9,9 +10,10 @@ import '../Styling/login.css';
 
 const Login = (props) => {
     const { loginTypeHandler } = props;
+    const history = useHistory();
 
     const submitHandler = (e) => {
-        console.log('%cShivTest Test :->', 'color: blue', e);
+        history.push('/dashboard');
     }
 
     const inputChangeHandler = (e, inputType) => {
@@ -39,8 +41,9 @@ const Login = (props) => {
                     </Col>
                 </Form.Group>
                 <Col md={{ span: 8, offset: 4 }}>
-                    <Button block size="sm" onClick={(e) => submitHandler(e)} >
-                        <Link to="/dashboard" className="login-button">Login</Link>
+                    <Button style={{ backgroundColor: '#0062cc' }} block size="sm" onClick={(e) => submitHandler(e)} >
+                        {/* <Link to="/dashboard" className="login-button">Login</Link> */}
+                        Login
                     </Button>
                     <p className="login-type-text">Sign in using Phone <span className="email-login-button" onClick={(e) => loginTypeHandler(e, 'phone')}>click here</span>  </p>
                 </Col>
