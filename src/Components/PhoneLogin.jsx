@@ -31,18 +31,18 @@ const PhoneLogin = (props) => {
 
     return (
         <div className="login-container">
+            <h5 className="login-title">ARAM ACADAMY</h5>
             {!phoneOtp ?
-                <>
+                <div>
                     <TextField fullWidth id="standard-basic" label="Phone Number" color="primary" />
                     <br />
                     <br />
                     <Button className="blue-button" fullWidth="true" variant="contained" style={{ backgroundColor: '#329BF7', color: 'white', fontWeight: '600' }} size="large" onClick={e => setPhoneOtp(true)} >
                         Login
                     </Button>
-                </>
-
+                </div>
                 :
-                <>
+                <div>
                     <TextField fullWidth id="standard-basic" label="OTP" color="primary" />
                     <br />
                     <br />
@@ -52,10 +52,8 @@ const PhoneLogin = (props) => {
                     <br />
                     <br />
                     <Button color="primary" style={{ color: 'white', fontWeight: '600' }}>Resend</Button>
-                </>
+                </div>
             }
-            <br />
-            <p className="login-type-text">Sign in using Email <span className="email-login-button" onClick={(e) => loginTypeHandler(e, 'email')}>click here</span>  </p>
         </div>
     )
 }

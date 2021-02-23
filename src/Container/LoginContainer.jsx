@@ -25,17 +25,7 @@ class LoginContainer extends PureComponent {
         const { isPhoneLogin } = this.state;
 
         return (
-            <>
-                {
-                    isPhoneLogin ?
-                        <PhoneLogin
-                            loginTypeHandler={this.loginTypeHandler}
-
-                        /> : <Login
-                            loginTypeHandler={this.loginTypeHandler}
-                        />
-                }
-            </>
+            <PhoneLogin loginTypeHandler={this.loginTypeHandler} />
 
         )
     }

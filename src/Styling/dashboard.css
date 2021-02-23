@@ -14,3 +14,13 @@
 .course-info-text{
     padding-left: 30px;
 }
+.card-columns {
+    margin-top: 3em;
+}
+.class-lang{
+    position: relative;
+}
+
+.lang{
+    position: absolute;
+}

@@ -15,7 +15,6 @@ const Dashboard = () => (
     <Container fluid className="page-container">
         <Sidebar />
         <div className="page-content">
-            <h3>Course List </h3>
 
             <CardColumns>
                 {courseList && (
@@ -23,7 +22,6 @@ const Dashboard = () => (
                         <>
                             <Link to="course">
                                 <Card>
-
                                     <Card.Img variant="top" src={data.image} />
                                     <Card.Body>
                                         <Card.Title>{data.title}</Card.Title>
@@ -37,8 +35,10 @@ const Dashboard = () => (
                                                 {data.classDuration}
                                             </Card.Text>
                                             <Card.Text className="class-lang course-info-text">
-                                                <FontAwesomeIcon icon={faLanguage} />
-                                                {data.classLanguage}
+                                                <FontAwesomeIcon size='2x' icon={faLanguage} />
+                                                <span className="lang">
+                                                    {data.classLanguage}
+                                                </span>
                                             </Card.Text>
                                         </Row>
 

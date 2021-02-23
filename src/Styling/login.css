@@ -23,8 +23,11 @@ label{
     color: #FFF8F8 !important;
 }
 .MuiInput-underline:before{
-    color: #FFF8F8 !important;
+    border-bottom:  1px solid #FAF7F7 !important;
 }
 .MuiInputBase-input{
     color: #FFF8F8 !important;
+}
+.login-title{
+    margin-bottom: 2em;
 }
