@@ -57,33 +57,39 @@ export const courseList = [
 
 export const coursePlaylist = [
     {
-        title: '2021 Complete Python Bootcamp',
-        classDuration: '15:23',
-        image: "https://picsum.photos/48/36"
+        title: 'React native introduction',
+        classDuration: '02 min 05 sec',
+        image: "https://picsum.photos/400",
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s',
     },
     {
         title: '2021 Complete Python Bootcamp',
         classDuration: '15:23',
-        image: "https://picsum.photos/48/36"
+        image: "https://picsum.photos/150/160",
+        description: 'Learn to create Machine Learning Algorithms in Python and R from two Data Science experts.'
     },
     {
         title: '2021 Complete Python Bootcamp',
         classDuration: '15:23',
-        image: "https://picsum.photos/48/36"
+        image: "https://picsum.photos/150/160",
+        description: 'Learn to create Machine Learning Algorithms in Python and R from two Data Science experts.'
     },
     {
         title: '2021 Complete Python Bootcamp',
         classDuration: '15:23',
-        image: "https://picsum.photos/48/36"
+        image: "https://picsum.photos/150/160",
+        description: 'Learn to create Machine Learning Algorithms in Python and R from two Data Science experts.'
     },
     {
         title: '2021 Complete Python Bootcamp',
         classDuration: '15:23',
-        image: "https://picsum.photos/48/36"
+        image: "https://picsum.photos/150/160",
+        description: 'Learn to create Machine Learning Algorithms in Python and R from two Data Science experts.'
     },
     {
         title: '2021 Complete Python Bootcamp',
         classDuration: '15:23',
-        image: "https://picsum.photos/48/36"
+        image: "https://picsum.photos/150/160",
+        description: 'Learn to create Machine Learning Algorithms in Python and R from two Data Science experts.'
     },
 ]

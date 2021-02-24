@@ -1,9 +1,46 @@
-.list-video{
-    background-color:#ececec;
-}
+
 .show-video{
+    padding: 1em 4em;
+}
+.list-video{
+    padding-left: 0;
 }
 
 .course-detail-wrapper{
+    margin-left: 0;
+}
+.playlist-image{
+    width: 110px;
+    height: 100%;
+}
+
+.playlist-wrapper{
+    border: 1px solid black;
+    margin-top: 1em;
+    box-shadow: 2px 4px 2px #6d6d6d47;
+}
+
+.image-column {
+padding-left: 0;
+}
+.content-column{
+    text-align: left;
+    padding: 5px;
+    padding-left: 1em;
+}
+.course-desc {
+    font-size: 13px;
+
+}
+.duration-wrapper{
+    position: relative;
+}
+.course-duration {
+    font-weight: 600;
+    font-size: 13px;
+    position: absolute;
+    color: #8c8c8c;
+}
+.course-title {
 
 }

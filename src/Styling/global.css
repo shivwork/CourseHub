@@ -18,10 +18,15 @@ a {
     background-image: url('../Resource/bcWall.jpg');
 } */
 .App{
-    background-color: #4470BF;
+    /* background-color: #4470BF; */
     height: 100vh;
 }
 
 svg{
     margin-right: 10px;
+}
+
+.header-margin {
+    height: 64px;
+    background-color: #007bff;
 }

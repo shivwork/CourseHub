@@ -13,6 +13,7 @@ import { courseList } from '../Utils/mockData';
 
 const Dashboard = () => (
     <Container fluid className="page-container">
+        <div className="header-margin"></div>
         <Sidebar />
         <div className="page-content">
 
