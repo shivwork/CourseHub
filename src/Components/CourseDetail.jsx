@@ -1,6 +1,9 @@
 import React from 'react';
 import { Container, Row, Col, Media } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import Sidebar from './Sidebar';
+import Button from '@material-ui/core/Button';
 
 import '../Styling/courseDetail.css';
 
@@ -15,6 +18,10 @@ const CourseDetail = () => (
             <Row>
                 <Col md={7} className="show-video">
                     <DisplayVideo />
+                    <Button style={{ marginTop: '3em', backgroundColor: '#329BF7' }} fullWidth="true" variant="contained" color="primary">
+                        <span>Sample.pdf </span>
+                        <FontAwesomeIcon icon={faDownload} />
+                    </Button>
                 </Col>
                 <Col md={5} className="list-video">
                     <CoursePlaylist />

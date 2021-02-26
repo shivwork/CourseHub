@@ -1,5 +1,6 @@
 import React from 'react';
 import { Media } from 'react-bootstrap';
+import LinearProgress from '@material-ui/core/LinearProgress';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faLayerGroup, faLanguage } from '@fortawesome/free-solid-svg-icons';
@@ -28,6 +29,7 @@ const CoursePlaylist = ({ image, title, duration, description }) => (
 
                         <p className="duration-wrapper"> <FontAwesomeIcon icon={faClock} /> <span className="course-duration">{data.classDuration}</span> </p>
                         <p className="course-desc">{data.description}</p>
+                        <LinearProgress style={{ height: '10px', borderRadius: '13px' }} className="progress-bar" variant="determinate" value={100} />
                     </div>
                 </Col>
             </Row>

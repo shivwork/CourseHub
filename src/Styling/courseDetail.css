@@ -1,6 +1,6 @@
 
 .show-video{
-    padding: 1em 4em;
+    padding: 1em 3em;
 }
 .list-video{
     padding-left: 0;
@@ -43,4 +43,18 @@ padding-left: 0;
 }
 .course-title {
 
+}
+
+.fa-download {
+    margin-left: 29em;
+}
+.progress-bar{
+    background-color: white !important;
+    margin-bottom: 9px;
+}
+.MuiLinearProgress-root {
+    height: 12px;
+}
+.MuiLinearProgress-barColorPrimary {
+    background-color: #329BF7 !important;
 }
