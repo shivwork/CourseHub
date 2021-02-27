@@ -6,11 +6,8 @@
     padding-left: 0;
 }
 
-.course-detail-wrapper{
-    margin-left: 0;
-}
 .playlist-image{
-    width: 110px;
+    width: 127px;
     height: 100%;
 }
 
@@ -57,4 +54,8 @@ padding-left: 0;
 }
 .MuiLinearProgress-barColorPrimary {
     background-color: #329BF7 !important;
+}
+
+.page-row{
+    margin-right: 0;
 }

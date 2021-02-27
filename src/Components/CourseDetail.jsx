@@ -11,11 +11,11 @@ import DisplayVideo from './DisplayVideo';
 import CoursePlaylist from './CoursePlaylist';
 
 const CourseDetail = () => (
-    <Container className="page-container course-detail-wrapper">
+    <div className="page-container course-detail-wrapper">
         <div className="header-margin"></div>
         <Sidebar />
         <div className="page-content">
-            <Row>
+            <Row className="page-row">
                 <Col md={7} className="show-video">
                     <DisplayVideo />
                     <Button style={{ marginTop: '3em', backgroundColor: '#329BF7' }} fullWidth="true" variant="contained" color="primary">
@@ -28,7 +28,7 @@ const CourseDetail = () => (
                 </Col>
             </Row>
         </div>
-    </Container>
+    </div>
 );
 
 export default CourseDetail;

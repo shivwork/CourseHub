@@ -20,6 +20,7 @@ a {
 .App{
     /* background-color: #4470BF; */
     height: 100vh;
+    padding: 0;
 }
 
 svg{

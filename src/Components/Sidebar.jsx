@@ -24,11 +24,11 @@ const Sidebar = () => (
                     <i className="fa fa-fw fa-home" style={{ fontSize: '1.75em' }} />
                 </NavIcon>
 
-                <NavText>
-                    My Courses
-                    <hr />
+                <NavText className="course-title-wrapper">
+                    <span className="sidebar-course-title">My Courses</span>
                 </NavText>
             </NavItem>
+
             <NavItem eventKey="logout" className="logout-button" style={{ position: 'absolute', width: '100%', bottom: '0' }}>
                 <NavIcon>
                     <FontAwesomeIcon icon={faSignOutAlt} />

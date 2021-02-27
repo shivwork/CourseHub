@@ -15,7 +15,7 @@ function App() {
   return (
     <Container fluid className="App">
       <Router>
-        <Route exact path="/" component={CourseDetail} />
+        <Route exact path="/" component={LoginContainer} />
         <Route path="/dashboard" component={DashboardContainer} />
         <Route path="/course" component={CourseDetail} />
       </Router>
