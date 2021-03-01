@@ -35,26 +35,26 @@ const Sidebar = () => (
                 </NavIcon>
                 <NavText  >
                     <FontAwesomeIcon icon={faSignOutAlt} />
-                    <Button
-                        className="logout-button-blue"
-                        fullWidth="true"
-                        variant="contained"
-                        style={{
-                            backgroundColor: '#329BF7',
-                            color: 'white',
-                            fontWeight: '600',
-                            width: '100%',
-                            position: 'absolute',
-                            left: 0,
-                            bottom: 0,
-                            height: '100%'
-                        }}
-                        size="large"
-                    >
-                        <Link className="logout-btn" to="/">
+                    <Link className="logout-btn" to="/">
+                        <Button
+                            className="logout-button-blue"
+                            fullWidth="true"
+                            variant="contained"
+                            style={{
+                                backgroundColor: '#329BF7',
+                                color: 'white',
+                                fontWeight: '600',
+                                width: '100%',
+                                position: 'absolute',
+                                left: 0,
+                                bottom: 0,
+                                height: '100%'
+                            }}
+                            size="large"
+                        >
                             Logout
-                        </Link>
                     </Button>
+                    </Link>
                 </NavText>
             </NavItem>
         </SideNav.Nav>
