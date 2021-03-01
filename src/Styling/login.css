@@ -31,3 +31,6 @@ label{
 .login-title{
     margin-bottom: 2em;
 }
+.verify-link {
+    color: white;
+}

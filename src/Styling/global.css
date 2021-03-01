@@ -1,11 +1,13 @@
 .page-content{
     flex-basis: 90%;
     padding-left: 2em;
-    padding-top: 1em;
+    padding-top: 5em;
 }
 
 .page-container{
     height: 100vh;
+    background-color: white;
+    position: relative;
 }
 .card-body{
     text-align: left;
@@ -18,7 +20,7 @@ a {
     background-image: url('../Resource/bcWall.jpg');
 } */
 .App{
-    /* background-color: #4470BF; */
+    background-color: #4470BF;
     height: 100vh;
     padding: 0;
 }
@@ -29,6 +31,9 @@ svg{
 
 .header-margin {
     height: 64px;
-    /* background-color: #007bff; */
     background-color: #4470BF;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
 }

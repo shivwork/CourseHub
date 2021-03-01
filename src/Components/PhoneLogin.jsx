@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
@@ -47,7 +48,10 @@ const PhoneLogin = (props) => {
                     <br />
                     <br />
                     <Button className="blue-button" fullWidth="true" variant="contained" style={{ backgroundColor: '#329BF7', color: 'white', fontWeight: '600' }} size="large" onClick={(e) => handlePhoneLogin(e)} >
-                        Verify
+                        <Link className="verify-link" to="/dashboard">
+                            Verify
+
+                    </Link>
                     </Button>
                     <br />
                     <br />
