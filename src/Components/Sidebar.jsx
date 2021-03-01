@@ -51,7 +51,9 @@ const Sidebar = () => (
                         }}
                         size="large"
                     >
-                        Logout
+                        <Link className="logout-btn" to="/">
+                            Logout
+                        </Link>
                     </Button>
                 </NavText>
             </NavItem>
